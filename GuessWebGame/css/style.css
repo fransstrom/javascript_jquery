@@ -1,0 +1,37 @@
+
+body, html{
+    margin:0px;
+    height:100%;
+}
+
+.hidden {
+    display: none;
+}
+
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.test{
+    font-size: large;
+}
+
+#gameSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+
+.gamewindow{
+
+}
+
+*{
+    position: relative;
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <script type="text/javascript" src="code.js"></script>
+    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="jquery-3.2.1.min"></script>
+    <title>Guess again! :D</title>
+
+</head>
+
+
+<body>
+<header>
+
+</header>
+<section id="gameSection" class="test  ">
+    <h1 id="title"></h1>
+    <div class="namebox">
+    <label>Ditt namn:
+        <input id="name" type="text" placeholder="Skriv in ditt namn här">
+    </label>
+        <p>testp</p>
+    <button id="namesub" type="button" name="button">Go!</button>
+    </div>
+    <div class="startGame hidden ">
+        <label>Wanna play a game?</label>
+        <div>
+        <button id="yes">yes</button>
+        <button id="no">no</button>
+        </div>
+    </div>
+
+    <div class="gamewindow hidden">
+
+        <label>Guess the number! (1 - 10)</label>
+        <br>
+        <input id="number" type="text" placeholder="guees numbers 1-10">
+        <button id="subNumber" class="numberInput" >Go!</button>
+        <p id="answer"> </p>
+        <p id ="rightanswer"> </p>
+    </div>
+
+
+</section>
+
+<script>
+
+
+
+    //Säger hej, välkommen
+    document.getElementById("namesub").addEventListener("click", nameLabel);
+    //Gömmer första input
+    document.getElementById("namesub").addEventListener("click", function () {
+        document.querySelector(".namebox").classList.add("hidden");
+    });
+    document.getElementById("namesub").addEventListener("click", function () {
+        document.querySelector(".startGame").classList.remove("hidden");
+
+    });
+
+    document.getElementById("yes").addEventListener("click", function () {
+        document.querySelector(".gamewindow").classList.remove("hidden");
+        document.querySelector(".startGame").classList.add("hidden");
+        document.querySelector("#title").classList.add("hidden");
+         count=0;
+
+    })
+
+    document.getElementById("subNumber").addEventListener("click", function () {
+
+        count++;
+
+
+        var guess = document.getElementById("number").value;
+        if  (parseInt(guess) === parseInt(number)){
+        document.getElementById("rightanswer").innerHTML="RÄTT SVAR11! " + number;
+        answer.innerHTML="";
+            alert("DU VANN, bra gjort "+ name+"!!");
+            document.getElementById("rightanswer").innerHTML="";
+            document.querySelector(".gamewindow").classList.add("hidden");
+            document.querySelector(".startGame").classList.remove("hidden");
+
+        }else if(isNaN(guess)){
+            document.getElementById("rightanswer").innerHTML="fel input!" + number;
+        }else if(parseInt(guess)!==parseInt(number)){
+            if(count >= 3){
+                alert("DU FÖRLORAD");
+                document.getElementById("rightanswer").innerHTML="";
+                document.querySelector(".gamewindow").classList.add("hidden");
+                document.querySelector(".startGame").classList.remove("hidden");
+
+            }
+            else{
+            document.getElementById("rightanswer").innerHTML="fel svar, gissa igen "+ count +" av 3 försök";
+
+            }
+
+        }
+
+
+    });
+
+    $('p').click(function(){
+        $('p').style.fontSize('22');
+    });
+</script>
+
+
+
+</body>
+</html>

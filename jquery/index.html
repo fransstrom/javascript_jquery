@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+
+    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>jquery guess</title>
+
+</head>
+
+
+
+<body>
+<header>
+<h1>Guess the number: The game</h1>
+</header>
+<section id="gameSection" class="test  ">
+    <h1 id="title"></h1>
+    <div class="namebox">
+        <label>Ditt namn:  </label>
+            <input id="name" type="text" placeholder="Skriv in ditt namn här">
+        <button id="namesub" type="button" name="button">Go!</button>
+
+    </div>
+    <div class="startGame hidden">
+        <label>Wanna play a game?</label>
+        <div>
+            <button type="button" id="yes">yes</button>
+            <button type="button" id="no">no</button>
+        </div>
+    </div>
+
+    <div class="gamewindow hidden">
+
+        <label>Guess the number! (1 - 10)</label>
+        <br>
+        <input id="number_input" type="number" placeholder="guees numbers 1-10">
+        <button type="button" id="subNumber" >Go!</button>
+        <br>
+        <p id="answer"> </p>
+
+    </div>
+
+
+
+
+</section>
+
+<footer><a href="index.html"><button>Starta om</button></a></footer>
+
+<script >
+    var number = Math.floor(Math.random() * 10 + 1);
+    var count = 0;
+    var guess;
+    $(document).ready( function () {
+
+        console.log(number);
+
+        $('#namesub').click( function () {
+            $('#title').text("Välkommen "+ $('#name').val() +"!");
+            $('.namebox').hide();
+            $('.startGame').fadeIn('slow').show();
+        });
+
+        $('#yes').click( function () {
+            $('.startGame').hide();
+            $('#title').hide();
+            $('.gamewindow').fadeIn('slow').show();
+        });
+
+
+        $('#subNumber').click(function game () {
+
+            count++;
+            guess=+$('#number_input').val();
+
+
+            if(guess===number){
+                $('#answer').text("DU VANN "+ $('#name').val() + ", Försätt spela");
+                count=0;
+                number = Math.floor(Math.random() * 10 + 1);
+                $('#gameSection').slideUp(50).slideDown(50).slideUp(50).slideDown(50).slideUp(50).slideDown(50).slideUp(50).slideDown(50).slideUp(50).slideDown(50).slideUp(50).slideDown(50).slideUp(50).slideDown(50);
+
+            }else if(guess !== number && count<=3){
+                $('#answer').text("FEL SVAR" + "\nFörsök nr: "+ count);
+
+            }else if(count>3){
+                count=0;
+                number = Math.floor(Math.random() * 10 + 1);
+                $('#answer').text("Du förlorade "+$('#name').val()+ ", Fortsätt spela");
+
+
+              //  $('header').animate({top: '30%'},'fast').animate({top: '0'},'fast').animate({top: '30%'},'fast').animate({top: '0'},'slow');;
+                $('footer').animate({height: '300px'},'fast').animate({height: '100px'},'fast').animate({height: '400px'},'fast').animate({height: '100px'},'slow');
+
+                $('header').animate({height: '300px'},'fast').animate({height: '100px'},'fast').animate({height: '400px'},'fast').animate({height: '100px'},'slow');
+            }
+
+            $('#number_input').val(" ");
+        })
+
+    });
+
+
+
+
+
+   /* $(document).ready( function () {
+        var count=0;
+
+        $('h1').on('click', function () {
+            $(this).css({'color':'red'});
+        });
+
+                $("button").click(function(){
+
+                    if(count%2===0) {
+                        count++;
+                        $("button").animate({left: '90%'});
+                        $("this").animate({left: '90%'});
+                        console.log(count);
+                    }else{
+                        count++;
+                        $("button").animate({left: '0'}, 'fast');
+                        $("this").animate({left: '0'},'slow');
+                        console.log(count);
+                    }
+                });
+
+
+    }); */
+
+</script>
+</body>
+</html>
