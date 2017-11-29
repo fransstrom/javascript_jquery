@@ -10,14 +10,14 @@ var pages = {
         title: "Apgapet",
         imgUrl: "images/klippa.jpg",
         bread: "Apan ramlade ner för en klippa.. synd",
-        options: [{text:"Beginning", to: "beginning"}]
+        options: [{text:"Start over", to: "beginning"}]
         },
 
     right:{
         title: "Djungelvrål",
         imgUrl: "images/kingkong.jpg",
         bread: "Apan hittade en frusen banan, fick superkrafter",
-        options: [{text:"Left", to: "left"}, {text:"Beginning", to:"beginning"}]
+        options: [{text:"Left", to: "left"}, {text:"Start over", to:"beginning"}]
     }
 
 

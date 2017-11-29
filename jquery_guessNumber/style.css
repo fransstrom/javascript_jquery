@@ -51,9 +51,7 @@ border-left: none;
     align-items: center;
     height: 100%;
     flex-direction: column;
-    outline: solid 90px darkred;
-    outline-offset: -90px;
-    border-radius: 30%;
+    border-radius: 50%;
     box-shadow: 0px 195px 121px 124px black inset;
 }
 
@@ -99,4 +97,8 @@ footer{
     border-bottom: none;
     border-left: none;
     border-right: none;
+}
+
+button{
+    cursor:pointer;
 }
