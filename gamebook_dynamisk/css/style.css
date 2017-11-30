@@ -1,0 +1,119 @@
+#image{
+    height: 300px;
+    width:auto;
+
+}
+
+html, body{
+    height:100%;
+}
+
+body{
+    height:100%;
+    margin:0 30%;
+    background-size: cover;
+    display: flex;
+}
+h1{
+    text-align: center;
+}
+
+li{
+    cursor:pointer;
+}
+
+header{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    height:91px;
+}
+
+#game-wind{
+    background-color: #00000094;
+    color:white;
+    padding:40px;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    border-radius: 10%;
+    border-style:solid;
+    border-width: 2px;
+}
+
+.buttonDiv{
+    margin:20px;
+    text-align:center;
+    position: relative;
+    align-content: center;
+    width: 100px;
+    background-color: red;
+    cursor: pointer;
+    border-radius: 30px;
+    border: solid 1.5px gold;
+}
+
+#page{
+    display: flex;
+    flex-direction:row;
+    align-content: center;
+    justify-content:center;
+}
+
+ul{
+    padding:0;
+}
+
+#title{
+    height:60px;
+    width:auto;
+    margin:auto;
+}
+
+.img_page_start{
+    position:absolute; top:0; left:0;
+    height: 300px;
+    width:auto;
+}
+
+.img_page_shire{
+    position:absolute; top:0; left:0;
+}
+
+.img_page_mordor_1{
+    position:absolute; bottom:10px; right:10px;
+}
+
+.img_page_mordor_2{
+    position:absolute; bottom:10px; left:10px;
+}
+
+.img_page_rivendell{
+    position:absolute;
+    top:10px;
+    right:10px;
+    transform: scaleX(-1);
+    height: 200px;
+}
+
+
+
+.shire_window{
+border-color:green;
+}
+
+.mordor_window{
+    border-color: darkred;
+}
+
+.start_window{
+    border-color: gold;
+}
+
+.rivendell_window{
+    border-color:gold;
+}
