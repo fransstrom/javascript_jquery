@@ -56,6 +56,19 @@ header{
     border-radius: 30px;
     border: solid 1.5px gold;
 }
+.buttonDiv:hover{
+    margin:20px;
+    text-align:center;
+    position: relative;
+    align-content: center;
+    width: 100px;
+    background-color: black;
+    color:white;
+    cursor: pointer;
+    border-radius: 10px;
+    border: solid 1.5px gold;
+}
+
 
 #page{
     display: flex;
@@ -75,13 +88,23 @@ ul{
 }
 
 .img_page_start{
-    position:absolute; top:0; left:0;
+    position:absolute;
+    top:0;
+    left:0;
     height: 300px;
     width:auto;
 }
+.img_page_rivendell_ani{
+    height: 300px;
+    width:auto;
+    position:absolute;
+}
+
 
 .img_page_shire{
     position:absolute; top:0; left:0;
+
+    height:20px;
 }
 
 .img_page_mordor_1{
@@ -100,7 +123,10 @@ ul{
     height: 200px;
 }
 
+.flip{
+    transform: scaleX(-1);
 
+}
 
 .shire_window{
 border-color:green;

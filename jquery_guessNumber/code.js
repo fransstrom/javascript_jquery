@@ -48,6 +48,8 @@ $(document).ready( function () {
         }
 
         $('#number_input').val(" ");
-    })
+    });
+
+
 
 });
